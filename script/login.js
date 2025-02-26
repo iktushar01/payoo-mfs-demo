@@ -10,7 +10,7 @@ document.getElementById("login_btn").addEventListener("click", function(event){
           !isNaN(accountNumber)
         ) {
           if (convertPin === 1234){
-            alert("Login Successful");
+            window.location.href = "./main.html";
           }
           else{
             alert("Login Failed");
