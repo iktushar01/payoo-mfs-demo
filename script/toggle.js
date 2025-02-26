@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initially hide the cash-out section
     document.getElementById("cash_out_section").style.display = "none"; // Hide Cash Out section
 
-    // When clicking on the "Add Money" box
+    // When clicking on the "Add Money" box 
     document.getElementById("add_money_box").addEventListener("click", function() {
         handleToggle("add_money_section", "block"); // Show Add Money section
         handleToggle("cash_out_section", "none"); // Hide Cash Out section
