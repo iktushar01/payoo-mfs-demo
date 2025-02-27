@@ -10,6 +10,19 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .box:hover{
+        border: 2px solid rgb(255, 255, 255);
+        background:rgb(22, 20, 24) ;
+        color:white;
+        
+      }
+      .box:active{
+        border: 2px solid rgb(91, 76, 76);
+        background: rgb(58, 58, 58);
+        color:rgb(255, 255, 255);
+      }
+    </style>
   </head>
   <body>
   <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
@@ -48,7 +61,7 @@
             <img class="w-8 mx-auto" src="./resources/wallet.svg " alt="">
             <h1 class=" font-bold">Pay Bill</h1>
           </div>
-          <div class="box border-2 border-gray-400 rounded-sm text-center p-4 ">
+          <div id="Transactions_box" class="box border-2 border-gray-400 rounded-sm text-center p-4 ">
             <img class="w-8 mx-auto" src="./resources/purse.svg" alt="">
             <h1 class=" font-bold">Transactions</h1>
           </div>
@@ -74,7 +87,7 @@
                 <label class="label">
                   <span class="label-text text-neutral-950 font-semibold mb-2">Bank Account Number</span>
                 </label>
-                <input value="01756650014" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl" required />
+                <input id="account_number" value="01756650014" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl" required />
               </div>
               <div class="form-control">
                 <label class="label">
@@ -98,7 +111,7 @@
         </div>
       </div>
     </section>
-    
+    <!-- cash out section -->
     <section id="cash_out_section">
       <h2 class="text-blue-500 text-xl font-bold pl-2">Cash Out</h2>
       <div class="hero ">
@@ -111,7 +124,7 @@
                 <label class="label">
                   <span class="label-text text-neutral-950 font-semibold mb-2">Bank Account Number</span>
                 </label>
-                <input value="01756650014" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl" required />
+                <input id="user_number" value="01756650014" type="number" placeholder="Enter 11 digit account number" class="input input-bordered rounded-2xl" required />
               </div>
               <div class="form-control">
                 <label class="label">
@@ -135,6 +148,11 @@
         </div>
       </div>
     </section>
+    <section id="transaction_section">
+      <h2 class="text-blue-500 text-xl font-bold pl-2">Transaction History</h2>
+      <div id="transaction_container"></div>
+
+    </section>
     
     </section>
 
@@ -143,7 +161,11 @@
 
     <script src="./script/addMoney.js"></script>
     <script src="./script/recape.js"></script>
-    <script src="./script/toggle.js"></script>
+    <!-- <script src="./script/toggle.js"></script> -->
     <script src="./script/cashout.js"></script>
+    <script src="./script/utilites/utilites.js"></script>
+    <script src="./script/utilites/toggle.js"></script>
+    <script src="./script/utilites/cashout.js"></script>
+    <script src="./script/transaction.js"></script>
 </body>
 </html>
